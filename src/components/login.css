@@ -1,0 +1,79 @@
+.login-box {
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #b7e2fc, #8cb2f5, #ffffff);
+  display: flex;
+  flex-direction: column;
+  max-width: max;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs con transición */
+.login-input {
+  margin-top: 15px;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.login-input:focus-within {
+  background: #ffffff;
+}
+
+/* Ícono de contraseña con transición */
+.password-toggle {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.password-toggle:hover {
+  color: #6a11cb;
+}
+
+/* Opciones de inicio de sesión */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.login-options a {
+  text-decoration: none;
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.login-options a:hover {
+  color: #6a11cb;
+}
+
+/* Botón de inicio de sesión con transición */
+.login-button {
+  margin-top: 15px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de registro */
+.register-text {
+  margin-top: 15px;
+  color: #555;
+}
+
+.register-button {
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.register-button:hover {
+  color: #6a11cb;
+}
