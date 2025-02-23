@@ -1,24 +1,42 @@
-#container {
+/* Estilos para el perfil de educador */
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.perfil-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.perfil-info {
   text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.perfil-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
+.perfil-info p {
+  font-size: 1rem;
+  color: gray;
 }
 
-#container a {
+.perfil-contacto {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.perfil-contacto a {
+  color: #007bff;
   text-decoration: none;
+  font-weight: bold;
 }

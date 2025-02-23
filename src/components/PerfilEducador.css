@@ -1,0 +1,57 @@
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    padding: 5px;
+}
+
+.perfil-info {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+}
+
+.perfil-info h2 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.perfil-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.perfil-contacto {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.perfil-contacto a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.perfil-contacto a:hover {
+    color: #0056b3;
+}
