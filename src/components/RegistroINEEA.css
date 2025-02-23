@@ -1,0 +1,67 @@
+/* RegistroINEEA.css */
+
+.page-content {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 450px;
+    margin: auto;
+  }
+  
+  .card-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .card-header h4 {
+    color: white;
+    margin: 0;
+  }
+  
+  .card-body {
+    margin-top: 20px;
+  }
+  
+  .ion-item {
+    margin-bottom: 15px;
+  }
+  
+  .ion-label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .ion-input {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .ion-select {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .ion-button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .ion-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+  
+  .ion-button:focus {
+    box-shadow: none;
+  }
+  
