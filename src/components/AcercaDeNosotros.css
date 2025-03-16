@@ -1,0 +1,26 @@
+/* Estilos para la página "Acerca de nosotros" */
+.acerca-de-nosotros {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.social-links a {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    color: #333;
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}

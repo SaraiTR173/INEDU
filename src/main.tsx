@@ -1,11 +1,13 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
+import { setupIonicReact } from '@ionic/react';
 import App from './App';
+import '@ionic/react/css/core.css';
 
-const container = document.getElementById('root');
-const root = createRoot(container!);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+setupIonicReact();
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );

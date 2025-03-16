@@ -1,27 +1,31 @@
 import React from 'react';
-import './PerfilEducador.css';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import './PerfilEducador.css'; // Importa el archivo CSS
 
-interface Educador {
-    nombre: string;
-    especialidad: string;
-    correo: string;
-    telefono: string;
-    foto: string;
-}
-
-const PerfilEducador: React.FC<{ educador: Educador }> = ({ educador }) => {
+const PerfilEducador: React.FC = () => {
     return (
-        <div className="perfil-container">
-            <img className="perfil-avatar" src={educador.foto} alt={educador.nombre} />
-            <div className="perfil-info">
-                <h2>{educador.nombre}</h2>
-                <p>{educador.especialidad}</p>
-            </div>
-            <div className="perfil-contacto">
-                <a href={`mailto:${educador.correo}`}>{educador.correo}</a>
-                <a href={`tel:${educador.telefono}`}>{educador.telefono}</a>
-            </div>
-        </div>
+        <IonPage>
+            <IonHeader>
+                <IonToolbar>
+                    <IonTitle>Perfil Educador</IonTitle>
+                </IonToolbar>
+            </IonHeader>
+            <IonContent className="ion-padding">
+                <div className="profile-info">
+                    <h1>Perfil Educador</h1>
+                    <p>Nombre completo: Marco Aurelio Gil Carrillo.</p>
+                    <p>Idioma: Español</p>
+                    <p>Entidad federativa: Morelos</p>
+                    <label>
+                        <input type="checkbox" /> Permitir notificaciones
+                    </label>
+                    <label>
+                        <input type="checkbox" /> Notificaciones de percepción
+                    </label>
+                    <button>Cambiar contraseña</button>
+                </div>
+            </IonContent>
+        </IonPage>
     );
 };
 
