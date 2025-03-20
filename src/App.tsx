@@ -15,7 +15,10 @@ const App: React.FC = () => (
     <IonApp>
         <IonReactRouter>
             <IonSplitPane contentId="main-content">
+                {/* Menú lateral */}
                 <Menu />
+
+                {/* Contenido principal */}
                 <IonRouterOutlet id="main-content">
                     <Route exact path="/" component={Home} />
                     <Route exact path="/inicio" component={Home} />

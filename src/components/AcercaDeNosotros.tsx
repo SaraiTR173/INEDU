@@ -14,7 +14,6 @@ const AcercaDeNosotros: React.FC = () => {
             </IonHeader>
             <IonContent className="ion-padding">
                 <div className="acerca-de-nosotros">
-                    <h1>Acerca de nosotros</h1>
 
                     {/* Sección de sitios oficiales */}
                     <div className="sitios-oficiales">
