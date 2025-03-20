@@ -1,26 +1,58 @@
-/* Estilos para la página "Acerca de nosotros" */
+/* Estilos generales */
 .acerca-de-nosotros {
     padding: 20px;
     font-family: Arial, sans-serif;
 }
 
-.social-links a {
-    display: block;
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los sitios oficiales */
+.sitios-oficiales ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sitios-oficiales li {
     margin: 10px 0;
+}
+
+.sitios-oficiales a {
+    display: flex;
+    align-items: center;
     color: #007bff;
     text-decoration: none;
-}
-
-.contact-info {
-    margin-top: 20px;
-}
-
-.contact-info p {
-    color: #333;
     font-size: 16px;
 }
 
-.contact-info a {
+.sitios-oficiales a:hover {
+    text-decoration: underline;
+}
+
+.sitios-oficiales ion-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Estilos para dudas o aclaraciones */
+.dudas-aclaraciones p {
+    color: #333;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.dudas-aclaraciones a {
     color: #007bff;
     text-decoration: none;
+}
+
+.dudas-aclaraciones a:hover {
+    text-decoration: underline;
 }
