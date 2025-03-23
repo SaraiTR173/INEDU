@@ -1,0 +1,110 @@
+/* RegistroINEEA.css */
+
+.page-content {
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 12px;
+    text-align: center;
+    color: #f5f5f5;
+  }
+  
+  .card-header h4 {
+    color: white;
+    margin: 0;
+  }
+  
+  .card-body {
+    margin-top: 20px;
+  }
+  
+  .ion-item {
+    margin-bottom: 15px;
+  }
+  
+  .ion-label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .ion-input {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .ion-select {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .ion-button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .ion-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+  
+  .ion-button:focus {
+    box-shadow: none;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  
+  /* Estilos para los requisitos de la contraseña */
+.password-requirements, .password-hint {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.password-requirements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.password-requirements li {
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+}
+
+.password-requirements li.valid {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.password-requirements li.invalid {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.password-toggle {
+  cursor: pointer;
+}

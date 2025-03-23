@@ -1,0 +1,135 @@
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar contenido */
+  
+  min-height: 100vh; /* Mínimo el alto de la pantalla */
+  width: 100vw; /* Ocupar todo el ancho */
+  
+  background: 
+    linear-gradient(#70acf1d8, #70acf1de), 
+    url('/src/componets/img/fondo-login.png'); 
+  background-size: cover; /* Cubrir todo el fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fijar el fondo */
+  
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-elipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover; /* Ajustar al tamaño del contenedor */
+  opacity: 0.6; /* Ajustar para semi-transparencia */
+}
+
+.accesorio {
+  position: absolute;
+  width: 50%;
+  margin-top: -50px;
+  margin-left: 60%;
+  object-fit: cover; /* Ajustar al tamaño del contenedor */
+  opacity: 0.6; /* Ajustar para semi-transparencia */
+  transform: rotate(10deg); /* Gira la imagen a 30 grados */
+}
+
+.login-logo{
+  object-fit: cover; /* Ajustar al tamaño del contenedor */
+}
+
+.inicio-box {
+  margin-top: 20%;
+}
+
+.nombre {
+  font-family: "SegoeUI-BoldItalic";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 48px;
+  color: #ffffff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: -100px;
+}
+
+.saludo {
+  font-size: 15px;
+  color: #ffffff;
+  text-align: justify; 
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+/* Inputs con transición */
+.login-input {
+  margin-top: 20px;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #e0e0e0;
+  text-align: center;
+}
+
+.login-input:focus-within {
+  background: #ffffff;
+}
+
+/* Ícono de contraseña con transición */
+.password-toggle {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.password-toggle:hover {
+  color: #6a11cb;
+}
+
+/* Opciones de inicio de sesión */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.login-options a {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: bold;
+}
+
+.login-options a:hover {
+  color: #6a11cb;
+}
+
+/* Botón de inicio de sesión con transición */
+.login-button {
+  margin-top: 15px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de registro */
+.register-text {
+  margin-top: 15px;
+  color: #555;
+}
+
+.register-button {
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.register-button:hover {
+  color: #6a11cb;
+}
