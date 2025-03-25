@@ -108,28 +108,12 @@
 
 /* Botón de inicio de sesión con transición */
 .login-button {
-  margin-top: 15px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  margin-top: 50px;
+  --background: #3243FE !important;
   color: white;
 }
 
 .login-button:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Botón de registro */
-.register-text {
-  margin-top: 15px;
-  color: #555;
-}
-
-.register-button {
-  color: #2575fc;
-  font-weight: bold;
-}
-
-.register-button:hover {
-  color: #6a11cb;
 }

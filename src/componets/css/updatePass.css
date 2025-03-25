@@ -1,0 +1,102 @@
+.update-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar contenido */
+  min-height: 100vh; /* Mínimo el alto de la pantalla */
+  width: 100vw; /* Ocupar todo el ancho */
+  background-color: #EBEBEB;
+  background-size: cover; /* Cubrir todo el fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fijar el fondo */
+}
+
+.update-elipse-up {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  object-fit: cover; /* Ajustar al tamaño del contenedor */
+}
+
+.update-img1{
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  object-fit: cover;
+}
+
+.update-text {
+  position:absolute;
+  color: #306100 ;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  top: 30%;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.update-cont{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
+}
+
+.update-text-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; /* Centrar contenido */
+  font-size: 19px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+/* Inputs con transición */
+.update-input {
+  border-radius: 50px;
+  overflow: hidden;
+  background: #e0e0e0;
+  width: 115%;
+  text-align: center;
+}
+
+.update-input:focus-within {
+  background: #ffffff;
+}
+
+.btnupdate {
+  position: absolute;
+  bottom: 20%;
+  width: 70%;
+  height: 50px;
+  font-size: 18px;
+  color: white;
+  --background: #2A6605 !important;  /* Forzar color de fondo */
+  border-radius: 20%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btnupdate:hover {
+  background: #1B5E20 !important; /* Verde más oscuro */
+  transform: scale(1.05);
+}
+
+.btnupdate:active {
+  background: #154F17 !important; /* Más oscuro al presionar */
+  transform: scale(0.98);
+}
+
+.update-elipse-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    object-fit: cover; 
+}

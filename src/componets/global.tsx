@@ -1,9 +1,9 @@
-import React from "react";
-import { useState, useEffect } from "react";
 import { 
 IonContent, 
 IonPage, 
 } from "@ionic/react";
+import React from "react";
+import { useState, useEffect } from "react";
 import INEA from "./img/INEA.png";
 import img1 from "./img/img1.png";
 import "./css/global.css";
@@ -37,7 +37,7 @@ const Global: React.FC = () => {
                 <div className="progress-container">
                     <div className="progress-bar" style={{ width: `${progress * 800}%` }}></div>
                 </div>
-                <img src={img1} alt="img1" className="img1"/>
+                <img src={img1} className="img1"/>
             </IonContent>
         </IonPage>
     );

@@ -6,9 +6,11 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { useState, useEffect } from "react";
-import Login from "./componets/login";
-import Registro from "./componets/registro";
 import Global from "./componets/global"; // Importa la pantalla de carga
+import Login from "./componets/login";
+import Verify from "./componets/verify";
+import UpdatePass from "./componets/updatePass";
+
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -47,11 +49,11 @@ const App: React.FC = () => {
                         <Route exact path="/login">
                             <Login />
                         </Route>
-                        <Route exact path="/register">
-                            <Registro />
+                        <Route exact path="/verify">
+                            <Verify />
                         </Route>
-                        <Route exact path="/">
-                            <Redirect to="/login" />
+                        <Route exact path="/update_pass">
+                            <UpdatePass />
                         </Route>
                     </IonRouterOutlet>
                 </IonReactRouter>

@@ -1,5 +1,5 @@
 import {
-  IonHeader,
+  IonToolbar,
   IonButton,
   IonContent,
   IonInput,
@@ -7,13 +7,16 @@ import {
   IonPage,
   IonIcon
 } from "@ionic/react";
+import React from "react";
 import { useState, useEffect } from "react";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
-import elipse from "./img/elipse-login.png";
-import accesorio from "./img/accesorio.png";
-import logo from "./img/logo.png";
-import "./css/login.css";
 import { useHistory } from "react-router-dom";
+
+import elipse from "./img/elipse-login.png";
+import accesorio from "./img/accesorio-login.png";
+import logo from "./img/logo.png";
+
+import "./css/login.css";
 
 const Login: React.FC = () => {
   //Componentes de Login
@@ -36,7 +39,7 @@ const Login: React.FC = () => {
   const handleLogin = () => {
     console.log("Logging in with", email, password);
   };
-
+  
   const handleVerify = () => {
     history.push("/verify");
   };
@@ -44,7 +47,7 @@ const Login: React.FC = () => {
   return (
     <IonPage >
       <IonContent>
-        <IonHeader style={{
+        <IonToolbar style={{
           position: 'fixed',
           top: 0,
           left: 0,
@@ -58,7 +61,7 @@ const Login: React.FC = () => {
           <div style={{ borderBottom: '12px solid #FF9800', width:'55%'}}></div>
           <div style={{ borderBottom: '12px solid #E53935', width:'45%'}}></div>
           <div style={{ borderBottom: '12px solid #717FC7', width:'20%'}}></div>
-        </IonHeader>
+        </IonToolbar>
         <img src={accesorio} className="accesorio"/>
         <img src={elipse} className="login-elipse"/>
         <div className="login-box">
@@ -68,28 +71,26 @@ const Login: React.FC = () => {
             <div className="inicio-box">
               <h3 className="saludo">{greeting}</h3>
               <IonItem className="login-input">
-              <IonIcon className="input-icon" />
-              <IonInput
-                type="email"
-                placeholder="Correo de INEA"
-                value={email}
-                onIonChange={(e) => setEmail(e.detail.value!)}
-              />
+                <IonInput
+                  type="email"
+                  placeholder="Correo de INEA"
+                  value={email}
+                  onIonChange={(e) => setEmail(e.detail.value!)}
+                />
               </IonItem>
               <IonItem className="login-input">
-              <IonIcon className="input-icon" />
-              <IonInput
-                type={showPassword ? "text" : "password"}
-                placeholder="Contraseña"
-                value={password}
-                onIonChange={(e) => setPassword(e.detail.value!)}
-              />
-              <IonIcon
-                icon={showPassword ? eyeOffOutline : eyeOutline}
-                slot="end"
-                className="password-toggle"
-                onClick={() => setShowPassword(!showPassword)}
-              />
+                <IonInput
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Contraseña"
+                  value={password}
+                  onIonChange={(e) => setPassword(e.detail.value!)}
+                />
+                <IonIcon
+                  icon={showPassword ? eyeOffOutline : eyeOutline}
+                  slot="end"
+                  className="password-toggle"
+                  onClick={() => setShowPassword(!showPassword)}
+                />
               </IonItem>
               <div className="login-options">
                 <label>
@@ -101,11 +102,6 @@ const Login: React.FC = () => {
             <IonButton expand="full" className="login-button" onClick={handleLogin}>
               INICIAR
             </IonButton>
-            {/*
-             <p className="register-text">¿No tienes cuenta?</p>
-            <IonButton expand="full" fill="clear" className="register-button" onClick={handleRegister}>
-              Regístrate
-            </IonButton> */}
           </div>
         </div> 
       </IonContent>
