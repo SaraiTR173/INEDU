@@ -6,7 +6,7 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { useState, useEffect } from "react";
-import Global from "./componets/global"; // Importa la pantalla de carga
+import Loading from "./componets/loading"; // Importa la pantalla de carga
 import Login from "./componets/login";
 import Verify from "./componets/verify";
 import UpdatePass from "./componets/updatePass";
@@ -42,10 +42,13 @@ const App: React.FC = () => {
     return (
         <IonApp>
             {showSplash ? (
-                <Global />
+                <Loading />
             ) : (
                 <IonReactRouter>
                     <IonRouterOutlet>
+                        <Route exact path="/">
+                            <Redirect to="/login" />
+                        </Route>
                         <Route exact path="/login">
                             <Login />
                         </Route>

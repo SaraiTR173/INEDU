@@ -31,6 +31,7 @@ import "./css/updatePass.css";
     const router = useIonRouter(); // Ionic Router para redirigir
     
     const handleConfirm = () => {
+        console.log("Valide in with", pass, confirm);
         setShowAlert(true); // Mostrar la alerta primero
         setTimeout(() => {
             setShowAlert(false); // Ocultar alerta

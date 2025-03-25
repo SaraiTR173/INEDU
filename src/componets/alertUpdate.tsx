@@ -3,7 +3,7 @@ import {
 } from "@ionic/react";
 import React from "react";
 
-import "./css/updatePass.css";
+import "./css/alertUpdate.css";
 
 interface SuccessAlert {
     isOpen: boolean;
@@ -14,9 +14,9 @@ interface SuccessAlert {
 const alertUpdate: React.FC<SuccessAlert> = ({ isOpen, image }) => {
 
     return (
-        <IonModal isOpen={isOpen} className="custom-modal">
-            <div style={{ textAlign: "center", padding: "20px" }}>
-                <img src={image} alt="Éxito" style={{ width: "100px", marginBottom: "15px" }} />
+        <IonModal isOpen={isOpen}>
+            <div className="success-alert-container">
+                <img src={image} alt="Éxito" />
                 <h2>¡Registro exitoso!</h2>
             </div>
         </IonModal>

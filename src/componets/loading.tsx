@@ -6,7 +6,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import INEA from "./img/INEA.png";
 import img1 from "./img/img1.png";
-import "./css/global.css";
+import "./css/loading.css";
 
 const Global: React.FC = () => {
     const [progress, setProgress] = useState(0);
@@ -33,7 +33,7 @@ const Global: React.FC = () => {
                 <div style={{ borderBottom: '20px solid #E53935', width:'45%'}}></div>
                 <div style={{ borderBottom: '20px solid #717FC7', width:'20%'}}></div>
                 <img src={INEA} alt="INEA" className="INEA"/>
-                <h2>LOADING</h2>
+                <h2>CARGANDO</h2>
                 <div className="progress-container">
                     <div className="progress-bar" style={{ width: `${progress * 800}%` }}></div>
                 </div>
