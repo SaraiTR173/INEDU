@@ -36,8 +36,9 @@ const Login: React.FC = () => {
     setGreeting(getGreeting());
   }, []);
 
-  const handleLogin = () => {
+  const handleEducando = () => {
     console.log("Logging in with", email, password);
+    history.push("/educando");
   };
   
   const handleVerify = () => {
@@ -99,7 +100,7 @@ const Login: React.FC = () => {
                 <a onClick={handleVerify}>¿Olvide mi contraseña?</a>
               </div>
             </div> 
-            <IonButton expand="full" className="login-button" onClick={handleLogin}>
+            <IonButton expand="full" className="login-button" onClick={handleEducando}>
               INICIAR
             </IonButton>
           </div>

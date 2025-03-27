@@ -6,11 +6,12 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { useState, useEffect } from "react";
+
 import Loading from "./componets/loading"; // Importa la pantalla de carga
 import Login from "./componets/login";
 import Verify from "./componets/verify";
 import UpdatePass from "./componets/updatePass";
-
+import Educando from "./componets/educando";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -57,6 +58,9 @@ const App: React.FC = () => {
                         </Route>
                         <Route exact path="/update_pass">
                             <UpdatePass />
+                        </Route>
+                        <Route exact path="/educando">
+                            <Educando/>
                         </Route>
                     </IonRouterOutlet>
                 </IonReactRouter>
