@@ -13,14 +13,14 @@ import { eyeOffOutline, eyeOutline } from "ionicons/icons";
 import { useIonRouter } from "@ionic/react"; // Para la redirección
 
 import SuccessAlertUpdate from "./alertUpdate"; 
-import successImage from "./img/updatePass.png";
+import successImage from "./img/login/updatePass.png";
 
-import img1 from "./img/img1.png";
-import up from "./img/elipseUp-verify.png";
-import down from "./img/elipseDown-verify.png";
+import img1 from "./img/login/img1.png";
+import up from "./img/login/elipseUp-verify.png";
+import down from "./img/login/elipseDown-verify.png";
 
 
-import "./css/updatePass.css";
+import "./css/login/updatePass.css";
   
   const UpdatePass: React.FC = () => {
     //Componentes de Login

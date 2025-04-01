@@ -3,7 +3,7 @@ import {
 } from "@ionic/react";
 import React from "react";
 
-import "./css/alertUpdate.css";
+import "./css/login/alertUpdate.css";
 
 interface SuccessAlert {
     isOpen: boolean;

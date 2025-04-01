@@ -10,11 +10,11 @@ import React from "react";
 import { useState} from "react";
 import { useHistory } from "react-router-dom";
 
-import img1 from "./img/img1.png";
-import up from "./img/elipseUp-verify.png";
-import down from "./img/elipseDown-verify.png";
+import img1 from "./img/login/img1.png";
+import up from "./img/login/elipseUp-verify.png";
+import down from "./img/login/elipseDown-verify.png";
 
-import "./css/verify.css";
+import "./css/login/verify.css";
   
   const Verify: React.FC = () => {
     //Componentes de Login

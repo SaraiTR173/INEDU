@@ -4,9 +4,9 @@ IonPage,
 } from "@ionic/react";
 import React from "react";
 import { useState, useEffect } from "react";
-import INEA from "./img/INEA.png";
-import img1 from "./img/img1.png";
-import "./css/loading.css";
+import INEA from "./img/login/INEA.png";
+import img1 from "./img/login/img1.png";
+import "./css/login/loading.css";
 
 const Global: React.FC = () => {
     const [progress, setProgress] = useState(0);
