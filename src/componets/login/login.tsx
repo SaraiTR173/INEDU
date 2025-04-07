@@ -12,11 +12,11 @@ import { useState, useEffect } from "react";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
 import { useHistory } from "react-router-dom";
 
-import elipse from "./img/login/elipse-login.png";
-import accesorio from "./img/login/accesorio-login.png";
-import logo from "./img/login/logo.png";
+import elipse from "./img/elipse-login.png";
+import accesorio from "./img/accesorio-login.png";
+import logo from "./img/logo.png";
 
-import "./css/login/login.css";
+import "./css/login.css";
 
 const Login: React.FC = () => {
   //Componentes de Login

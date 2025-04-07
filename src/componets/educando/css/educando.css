@@ -1,0 +1,46 @@
+.educando-menu {
+  background: url("/assets/background-books.png") no-repeat center center;
+  background-size: cover;
+}
+
+.educando-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #ccc;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.educando-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.educando-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.educando-status {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.activo {
+  color: green;
+  font-weight: bold;
+}
+
+.educando-logout {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
