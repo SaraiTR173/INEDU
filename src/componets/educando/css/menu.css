@@ -1,0 +1,174 @@
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(249, 249, 249, 0.8);
+
+}
+
+/* Usuario*/
+.menu-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #49494947;
+    align-items: center;
+    height: 10%;
+}
+
+  
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-right: 10px;
+}
+  
+  .avatar-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+  
+.user-status {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+  
+.status-active {
+    color: #28a745; /* Verde para "Activo" */
+    font-weight: bold;
+}
+  
+.user-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Botones*/
+.menu-buttons{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(249, 249, 249, 0.8);
+}
+
+.button-inicio{
+    position: absolute;
+    --background: #d0d8e1 !important;
+    border-radius: 0px 15px 15px 0px !important;
+    overflow: hidden;
+    height: auto;
+    width: 95%;
+    left: -2px;
+    top: 70px;
+    text-transform: none;
+}
+
+.button-perfil{
+    position: absolute;
+    --background: #d0d8e1 !important;
+    border-radius: 0px 15px 15px 0px !important;
+    overflow: hidden;
+    height: auto;
+    width: 95%;
+    left: -2px;
+    top: 130px;
+    text-transform: none;
+}
+
+.button-examenes{
+    position: absolute;
+    --background: #d0d8e1 !important;
+    border-radius: 0px 15px 15px 0px !important;
+    overflow: hidden;
+    height: auto;
+    width: 95%;
+    left: -2px;
+    top: 190px;
+    text-transform: none;
+}
+
+.button-calificacion{
+    position: absolute;
+    --background: #d0d8e1 !important;
+    border-radius: 0px 15px 15px 0px !important;
+    overflow: hidden;
+    height: auto;
+    width: 95%;
+    left: -2px;
+    top: 250px;
+    text-transform: none;
+}
+
+.button-evaluacion{
+    position: absolute;
+    --background: #d0d8e1 !important;
+    border-radius: 0px 15px 15px 0px !important;
+    overflow: hidden;
+    height: auto;
+    width: 95%;
+    left: -2px;
+    top: 310px;
+    text-transform: none;
+}
+
+.button-nosotros{
+    position: absolute;
+    --background: #d0d8e1 !important;
+    border-radius: 0px 15px 15px 0px !important;
+    overflow: hidden;
+    height: auto;
+    width: 95%;
+    left: -2px;
+    top: 370px;
+    text-transform: none;
+}
+
+.button-salir{
+    position: absolute;
+    --background: #d0d8e1 !important;
+    border-radius: 0 15px 15px 0 !important;
+    overflow: hidden;
+    height: auto;
+    width: 95%;
+    left: -2px;
+    bottom: 70px;
+    text-transform: none;
+}
+
+/* Contenido de los botones*/
+.button-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+  
+.button-icon {
+    margin-right: 25px;
+    object-fit: contain;
+    /* Fuerza alineación vertical */
+    position: relative;
+    left: 10px;
+}
+  
+.button-text {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    color: #000;
+}

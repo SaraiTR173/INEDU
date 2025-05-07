@@ -4,11 +4,13 @@ IonPage,
 } from "@ionic/react";
 import React from "react";
 import { useState, useEffect } from "react";
+
 import INEA from "./img/INEA.png";
 import img1 from "./img/img1.png";
+
 import "./css/loading.css";
 
-const Global: React.FC = () => {
+const Loading: React.FC = () => {
     const [progress, setProgress] = useState(0);
     useEffect(() => {
         let interval = setInterval(() => {
@@ -43,4 +45,4 @@ const Global: React.FC = () => {
     );
 };
 
-export default Global;
+export default Loading;

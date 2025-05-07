@@ -1,0 +1,21 @@
+.box-inicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar contenido */
+  
+  min-height: 100vh; /* Mínimo el alto de la pantalla */
+  width: 100vw; /* Ocupar todo el ancho */
+  
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.106), rgba(0, 0, 0, 0.117)),  
+    url('/src/componets/educando/img/fondo-educando.png'); 
+  background-size: cover; /* Cubrir todo el fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fijar el fondo */
+  
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

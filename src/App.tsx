@@ -7,11 +7,25 @@ import {
 import { IonReactRouter } from "@ionic/react-router";
 import { useState, useEffect } from "react";
 
-import Loading from "./componets/loading/loading"; // Importa la pantalla de carga
+//Carga
+import Loading from "./componets/loading/loading";
+
+//Login
 import Login from "./componets/login/login";
+
+//Login Educando
 import Verify from "./componets/login/verify";
 import UpdatePass from "./componets/login/updatePass";
-import Educando from "./componets/educando/educandoLayout";
+
+//Educando
+import InicioEducando from "./componets/educando/inicio";
+import InicioEducandosq from "./componets/educando/inicio-e";
+import PerfilEducando from "./componets/educando/perfil";
+import ExamenesEducando from "./componets/educando/examenes";
+import CalificacionEducando from "./componets/educando/calificacion";
+import EvaluacionEducando from "./componets/educando/evaluacion";
+import NosotrosEducando from "./componets/educando/nosotros";
+
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -47,21 +61,18 @@ const App: React.FC = () => {
             ) : (
                 <IonReactRouter>
                     <IonRouterOutlet>
-                        <Route exact path="/">
-                            <Redirect to="/login" />
-                        </Route>
-                        <Route exact path="/login">
-                            <Login />
-                        </Route>
-                        <Route exact path="/verify">
-                            <Verify />
-                        </Route>
-                        <Route exact path="/update_pass">
-                            <UpdatePass />
-                        </Route>
-                        <Route exact path="/educando">
-                            <Educando/>
-                        </Route>
+                        <Route exact path="/" render={() => <Redirect to="/login" />} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/verify" component={Verify} />
+                        <Route exact path="/update_pass" component={UpdatePass} />
+                        
+                        <Route exact path="/educando/inicio" component={InicioEducando} />
+                        <Route exact path="/educando/perfil" component={PerfilEducando} />
+                        <Route exact path="/educando/examenes" component={ExamenesEducando} />
+                        <Route exact path="/educando/calificacion" component={CalificacionEducando} />
+                        <Route exact path="/educando/evaluacion" component={EvaluacionEducando} />
+                        <Route exact path="/educando/nosotros" component={NosotrosEducando} />
+                                
                     </IonRouterOutlet>
                 </IonReactRouter>
             )}

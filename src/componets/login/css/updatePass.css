@@ -82,6 +82,8 @@
   cursor: pointer;
   z-index: 10;
   transition: background 0.3s ease-in-out, transform 0.2s;
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 
 .btnupdate:hover {

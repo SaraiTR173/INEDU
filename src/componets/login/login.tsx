@@ -24,6 +24,7 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [greeting, setGreeting] = useState("");
+
   const history = useHistory(); 
 
   useEffect(() => {
@@ -36,9 +37,9 @@ const Login: React.FC = () => {
     setGreeting(getGreeting());
   }, []);
 
-  const handleEducando = () => {
+  const handleLogin = () => {
     console.log("Logging in with", email, password);
-    history.push("/educando");
+    history.push("/educando/inicio");
   };
   
   const handleVerify = () => {
@@ -46,7 +47,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <IonPage >
+    <IonPage>
       <IonContent>
         <IonToolbar style={{
           position: 'fixed',
@@ -100,7 +101,7 @@ const Login: React.FC = () => {
                 <a onClick={handleVerify}>¿Olvide mi contraseña?</a>
               </div>
             </div> 
-            <IonButton expand="full" className="login-button" onClick={handleEducando}>
+            <IonButton expand="full" className="login-button" onClick={handleLogin}>
               INICIAR
             </IonButton>
           </div>
