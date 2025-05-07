@@ -1,6 +1,17 @@
 import React from 'react';
-import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel } from '@ionic/react';
+import { 
+  IonMenu, 
+  IonHeader, 
+  IonToolbar, 
+  IonTitle, 
+  IonContent, 
+  IonList, 
+  IonItem, 
+  IonLabel,
+  IonIcon 
+} from '@ionic/react';
 import { useHistory } from 'react-router-dom';
+import { logOutOutline } from 'ionicons/icons'; // Importa el icono de salida
 
 const Menu: React.FC = () => {
     const history = useHistory();
@@ -9,34 +20,50 @@ const Menu: React.FC = () => {
         history.push(path);
     };
 
+    const handleLogout = () => {
+        // Lógica para cerrar sesión
+        console.log('Cerrando sesión...');
+        localStorage.clear();
+        history.push('/login');
+    };
+
     return (
         <IonMenu contentId="main-content">
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Menú</IonTitle>
+                    <IonTitle>Menú INEDU</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent>
                 <IonList>
-                    <IonItem onClick={() => navigateTo('/inicio')}>
+                    <IonItem button onClick={() => navigateTo('/inicio')}>
                         <IonLabel>Inicio</IonLabel>
                     </IonItem>
-                    <IonItem onClick={() => navigateTo('/perfil')}>
+                    <IonItem button onClick={() => navigateTo('/perfil')}>
                         <IonLabel>Perfil</IonLabel>
                     </IonItem>
-                    <IonItem onClick={() => navigateTo('/examenes')}>
+                    <IonItem button onClick={() => navigateTo('/examenes')}>
                         <IonLabel>Exámenes</IonLabel>
                     </IonItem>
-                    <IonItem onClick={() => navigateTo('/calificacion')}>
+                    <IonItem button onClick={() => navigateTo('/calificacion')}>
                         <IonLabel>Calificación</IonLabel>
                     </IonItem>
-                    <IonItem onClick={() => navigateTo('/evaluacion')}>
+                    <IonItem button onClick={() => navigateTo('/evaluacion')}>
                         <IonLabel>Evaluación</IonLabel>
                     </IonItem>
-                    <IonItem onClick={() => navigateTo('/acerca-de-nosotros')}>
+                    <IonItem button onClick={() => navigateTo('/acerca-de-nosotros')}>
                         <IonLabel>Acerca de nosotros</IonLabel>
                     </IonItem>
-                    <IonItem onClick={() => navigateTo('/salir')}>
+                </IonList>
+                
+                {/* Botón de Salir con mismo estilo que Perfil, en la parte inferior */}
+                <IonList style={{ position: 'absolute', bottom: '0', width: '100%' }}>
+                    <IonItem 
+                        button 
+                        onClick={handleLogout}
+                        detail={false}
+                    >
+                        <IonIcon slot="start" icon={logOutOutline} />
                         <IonLabel>Salir</IonLabel>
                     </IonItem>
                 </IonList>

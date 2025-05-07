@@ -1,58 +1,111 @@
-/* Estilos generales */
-.acerca-de-nosotros {
+.acerca-container {
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #555;
+  }
+  
+  .acerca-container h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .acerca-container h2 {
+    font-size: 18px;
+    color: #4a6fa5;
     margin-bottom: 15px;
-}
-
-/* Estilos para los sitios oficiales */
-.sitios-oficiales ul {
-    list-style-type: none;
+    font-weight: 500;
+  }
+  
+  .redes-section {
+    margin-bottom: 30px;
+  }
+  
+  .redes-list {
+    list-style: none;
     padding: 0;
-}
-
-.sitios-oficiales li {
-    margin: 10px 0;
-}
-
-.sitios-oficiales a {
+    margin: 0;
+  }
+  
+  .redes-list li {
+    margin-bottom: 12px;
+  }
+  
+  .redes-list a {
     display: flex;
     align-items: center;
-    color: #007bff;
     text-decoration: none;
-    font-size: 16px;
-}
-
-.sitios-oficiales a:hover {
-    text-decoration: underline;
-}
-
-.sitios-oficiales ion-icon {
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-/* Estilos para dudas o aclaraciones */
-.dudas-aclaraciones p {
     color: #333;
     font-size: 16px;
-    margin: 10px 0;
-}
-
-.dudas-aclaraciones a {
-    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .redes-list a:hover {
+    color: #4a6fa5;
+  }
+  
+  .icon {
+    margin-right: 12px;
+    font-size: 20px;
+    color: #4a6fa5;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 25px 0;
+  }
+  
+  .contacto-section {
+    margin-top: 30px;
+  }
+  
+  .contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .website-link,
+  .telefono-link {
+    color: #4a6fa5;
     text-decoration: none;
-}
-
-.dudas-aclaraciones a:hover {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .website-link::before {
+    content: "🌐";
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .telefono-link::before {
+    content: "📞";
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .website-link:hover,
+  .telefono-link:hover {
     text-decoration: underline;
-}
+  }
+  
+  @media (max-width: 480px) {
+    .acerca-container {
+      padding: 15px;
+    }
+    
+    .acerca-container h1 {
+      font-size: 22px;
+    }
+    
+    .acerca-container h2 {
+      font-size: 17px;
+    }
+  }
