@@ -5,8 +5,6 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: rgba(249, 249, 249, 0.8);
-
 }
 
 /* Usuario*/
@@ -21,7 +19,6 @@
     height: 10%;
 }
 
-  
 .avatar-circle {
     width: 50px;
     height: 50px;
@@ -57,14 +54,10 @@
     display: flex;
     align-items: center;
     width: 100%;
-}
+  }
 
-
-/* Botones*/
-.menu-buttons{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(249, 249, 249, 0.8);
+.buttons{
+    --background: #F9F9F9 !important;
 }
 
 .button-inicio{
@@ -74,7 +67,7 @@
     overflow: hidden;
     height: auto;
     width: 95%;
-    left: -2px;
+    left: -5px;
     top: 70px;
     text-transform: none;
 }
@@ -86,7 +79,7 @@
     overflow: hidden;
     height: auto;
     width: 95%;
-    left: -2px;
+    left: -5px;
     top: 130px;
     text-transform: none;
 }
@@ -98,7 +91,7 @@
     overflow: hidden;
     height: auto;
     width: 95%;
-    left: -2px;
+    left: -5px;
     top: 190px;
     text-transform: none;
 }
@@ -110,7 +103,7 @@
     overflow: hidden;
     height: auto;
     width: 95%;
-    left: -2px;
+    left: -5px;
     top: 250px;
     text-transform: none;
 }
@@ -122,7 +115,7 @@
     overflow: hidden;
     height: auto;
     width: 95%;
-    left: -2px;
+    left: -5px;
     top: 310px;
     text-transform: none;
 }
@@ -134,7 +127,7 @@
     overflow: hidden;
     height: auto;
     width: 95%;
-    left: -2px;
+    left: -5px;
     top: 370px;
     text-transform: none;
 }
@@ -146,7 +139,7 @@
     overflow: hidden;
     height: auto;
     width: 95%;
-    left: -2px;
+    left: -5px;
     bottom: 70px;
     text-transform: none;
 }

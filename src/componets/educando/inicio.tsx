@@ -20,6 +20,12 @@ import icon_eval from "./img/img-eval.png";
 import icon_nosotros from "./img/img-nosotros.png";
 import icon_exit from "./img/img-exit.png";
 
+import Lengua_1 from "./img/LyC1.png";
+import Lengua_2 from "./img/LyC2.png";
+import Mat_1 from "./img/PM1.png";
+import Mat_2 from "./img/PM2.png";
+import Vida_1 from "./img/VyC1.png";
+
 import "./css/menu.css"; // Personalizar menu
 import "./css/inicio.css";
 
@@ -43,6 +49,12 @@ const Inicio: React.FC = () => {
   const Nosotros = () => navigateAndCloseMenu("/educando/nosotros");
   const Login = () => navigateAndCloseMenu("/login");
 
+  const Lengua1 = () => navigateAndCloseMenu("/educando/materias/Lengua-y-Comunicacion-1");
+  const Lengua2 = () => navigateAndCloseMenu("/educando/materias/Lengua-y-Comunicacion-2");
+  const Mate1 = () => navigateAndCloseMenu("/educando/materias/Pensamiento-Matematico-1");
+  const Mate2 = () => navigateAndCloseMenu("/educando/materias/Pensamiento-Matematico-2");
+  const Vida1 = () => navigateAndCloseMenu("/educando/materias/Vida-y-Comunidad-1");
+
   return (
     <>
       <IonMenu contentId="main-content">
@@ -57,8 +69,8 @@ const Inicio: React.FC = () => {
           </div>
         </div>
       </div>
-        <IonContent>
-          <div className="menu-buttons">
+        <IonContent className="buttons">
+          <div>
             <IonButton className="button-inicio" onClick={Inicio}>
               <div className="button-content">
                 <img src={icon_inicio} className="button-icon"/>
@@ -114,34 +126,58 @@ const Inicio: React.FC = () => {
       {/* Contenido principal */}
       <IonPage id="main-content">
         <IonContent>
-          <IonToolbar className="user-inicio">
-            <div slot="start">
-              <IonMenuButton>
-                <img src={menuIcon} style={{ width: "24px" }} />
-              </IonMenuButton>
-            </div>
-            <div>
-              <div>
-                <div>
-                  <img src={user} alt="Avatar" className="avatar-image"/>
-                </div>
-                <div>
-                  <h1>Te damos la bienvenida:</h1>
-                  <p>Marco Aurelio Gil Carrillo.</p>
-                    <div>
-                      <p>
-                        Alumno: <span className="active-status">Activo</span>
-                      </p>
-                      <p>Aspirando la escuela primaria</p>
-                    </div>
-                </div>
+          <IonToolbar>
+            <div className="info-inicio">
+              <div className="menu-inicio">
+                <IonMenuButton>
+                  <img src={menuIcon} style={{ width: "24px" }} />
+                </IonMenuButton>
+                <img src={user} className="user-inicio"/>
+              </div>
+              <div className="info-texto">
+                <span className="bienvenida">Te damos la bienvenida:</span>
+                <span className="educando">Marco Aurelio Gil Carrillo.</span>
+                <span className="aspirante-educando">Aspirando la escuela primaria</span>
               </div>
             </div>
           </IonToolbar>
+
           <div className="box-inicio"> 
-            <div>
-              <h1>INICIO</h1>
-            </div>
+              <IonButton  
+                onClick={Lengua1}
+                style={{ '--background': 'transparent', '--box-shadow': 'none' }}
+              >
+                  <img src={Lengua_1}/>
+              </IonButton>
+
+              <IonButton 
+                onClick={Lengua2}
+                style={{ '--background': 'transparent', '--box-shadow': 'none' }}
+              >
+                  <img src={Lengua_2}/>
+              </IonButton>
+
+              <IonButton 
+                onClick={Mate1}
+                style={{ '--background': 'transparent', '--box-shadow': 'none' }}
+              >
+                  <img src={Mat_1}/>
+              </IonButton>
+
+              <IonButton 
+                onClick={Mate2}
+                style={{ '--background': 'transparent', '--box-shadow': 'none' }}
+              >
+                  <img src={Mat_2}/>
+              </IonButton>
+
+              <IonButton 
+                onClick={Vida1}
+                style={{ '--background': 'transparent', '--box-shadow': 'none' }}
+              >
+                  <img src={Vida_1}/>
+              </IonButton>
+
           </div>
         </IonContent>
       </IonPage>

@@ -8,7 +8,7 @@
   width: 100vw; /* Ocupar todo el ancho */
   
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.106), rgba(0, 0, 0, 0.117)),  
+  linear-gradient(rgba(189, 221, 255, 0.5), rgba(189, 221, 255, 0.336)),
     url('/src/componets/educando/img/fondo-educando.png'); 
   background-size: cover; /* Cubrir todo el fondo */
   background-position: center;
@@ -18,4 +18,50 @@
   padding: 25px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de los toolbar*/
+.info-inicio{
+  display: flex;
+  flex-direction: row;
+  height: 93px; 
+}
+
+.menu-inicio{
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  width: 30%;
+  
+}
+
+.user-inicio{
+  width: 65px;
+  height: 65px;
+  margin-left: 5px;
+}
+
+.info-texto{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 70%;
+}
+
+.bienvenida{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px; 
+}
+
+.educando{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0; 
+}
+
+.aspirante-educando{
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px; 
 }

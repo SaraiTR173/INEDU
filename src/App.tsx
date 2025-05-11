@@ -19,12 +19,18 @@ import UpdatePass from "./componets/login/updatePass";
 
 //Educando
 import InicioEducando from "./componets/educando/inicio";
-import InicioEducandosq from "./componets/educando/inicio-e";
-import PerfilEducando from "./componets/educando/perfil";
+//import PerfilEducando from "./componets/educando/perfil";
 import ExamenesEducando from "./componets/educando/examenes";
-import CalificacionEducando from "./componets/educando/calificacion";
-import EvaluacionEducando from "./componets/educando/evaluacion";
-import NosotrosEducando from "./componets/educando/nosotros";
+//import CalificacionEducando from "./componets/educando/calificacion";
+//import EvaluacionEducando from "./componets/educando/evaluacion";
+//import NosotrosEducando from "./componets/educando/nosotros";
+
+//Materias Educando
+import Lengua1 from "./componets/educando/Materias/Lengua1";
+import Lengua2 from "./componets/educando/Materias/Lengua2";
+import Mate1 from "./componets/educando/Materias/Mate1";
+import Mate2 from "./componets/educando/Materias/Mate2";
+import Vida1 from "./componets/educando/Materias/Vida1";
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -67,12 +73,17 @@ const App: React.FC = () => {
                         <Route exact path="/update_pass" component={UpdatePass} />
                         
                         <Route exact path="/educando/inicio" component={InicioEducando} />
-                        <Route exact path="/educando/perfil" component={PerfilEducando} />
+                        {/* <Route exact path="/educando/perfil" component={PerfilEducando} />*/}
                         <Route exact path="/educando/examenes" component={ExamenesEducando} />
-                        <Route exact path="/educando/calificacion" component={CalificacionEducando} />
-                        <Route exact path="/educando/evaluacion" component={EvaluacionEducando} />
-                        <Route exact path="/educando/nosotros" component={NosotrosEducando} />
-                                
+                        {/* <Route exact path="/educando/calificacion" component={CalificacionEducando} /> */}
+                        {/* <Route exact path="/educando/evaluacion" component={EvaluacionEducando} /> */}
+                        {/* <Route exact path="/educando/nosotros" component={NosotrosEducando} /> */}
+
+                        <Route exact path="/educando/materias/Lengua-y-Comunicacion-1" component={Lengua1} />
+                        <Route exact path="/educando/materias/Lengua-y-Comunicacion-2" component={Lengua2} />
+                        <Route exact path="/educando/materias/Pensamiento-Matematico-1" component={Mate1} />
+                        <Route exact path="/educando/materias/Pensamiento-Matematico-2" component={Mate2} />
+                        <Route exact path="/educando/materias/Vida-y-Comunidad-1" component={Vida1} />
                     </IonRouterOutlet>
                 </IonReactRouter>
             )}

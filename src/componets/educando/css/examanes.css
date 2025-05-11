@@ -1,0 +1,104 @@
+.examenes-box {
+  display: flex;
+  flex-direction: column;
+    
+  min-height: 100vh; /* Mínimo el alto de la pantalla */
+  width: 100vw; /* Ocupar todo el ancho */
+    
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.106), rgba(0, 0, 0, 0)),  
+    url('/src/componets/educando/img/fondo-educando.png'); 
+  background-size: cover; /* Cubrir todo el fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fijar el fondo */
+    
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de los toolbar*/
+.toolbar-examenes{
+  display: flex;
+  flex-direction: row;
+  height: 65px;  
+}
+
+.menu-examanes{
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  width: 30%;
+}
+
+.user-examen{
+  width: 65px;
+  height: 65px;
+  margin-left: 5px;
+}
+
+.toolbar-cantidad{
+  display: flex;
+  flex-direction: column;
+  background-color: #88acff71;  
+  text-align: center;
+  width: 70%;
+}
+
+.text-examenes{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Botones */
+.btnexamenes-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnexamenes {
+  display:flex;    
+  flex-direction: column;
+  --background: transparent !important;
+  border-radius: none !important;
+  margin-top: 50px;
+  --box-shadow: none !important;
+}
+
+.estilo {
+  display: flex;
+  flex-direction: column;
+}  
+
+.up-label {
+  height: 50px;
+  width: 380px;
+  text-align: left;
+  padding: 15px;
+  font-weight: bold;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+  
+.down-label {
+  width: 380px;;
+  height: 50px;
+  text-align: center;
+  padding-left: 16px;
+  color: white;
+  font-weight: bold;
+  padding: 15px; 
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+  
+
+.label-examenes {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0;
+  text-transform: none;
+}
