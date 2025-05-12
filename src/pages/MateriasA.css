@@ -1,0 +1,86 @@
+/* Fondo de la página */
+.materias-page {
+  --background: url('src\img\fondo_libros.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.content-background {
+  --background: rgba(255, 255, 255, 0.85);
+  background: var(--background);
+  backdrop-filter: blur(5px);
+}
+
+/* Estilos del encabezado */
+.header-toolbar {
+  --background: #2c3e50;
+  --color: white;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+/* Estilos de las tarjetas */
+.materias-grid {
+  padding: 20px;
+}
+
+.materia-card {
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.materia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores específicos para cada materia */
+.lengua-card {
+  --background: #3498db;
+  --color: white;
+  border-top: 4px solid #2980b9;
+}
+
+.matematicas-card {
+  --background: #e74c3c;
+  --color: white;
+  border-top: 4px solid #c0392b;
+}
+
+/* Contenido de las tarjetas */
+.card-header {
+  padding-bottom: 0;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+.materia-img {
+  width: auto;
+  max-height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
