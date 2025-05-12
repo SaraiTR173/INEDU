@@ -1,0 +1,72 @@
+/* Estilos generales */
+.ion-padding {
+    padding: 20px;
+    background-color: #e0e0e0;
+  }
+  
+  /* Contenedor principal */
+  .grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Tarjeta de calificación */
+  .card-calificacion {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Encabezado de la tarjeta */
+  .card-header {
+    background-color: #e47946;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Título de la tarjeta */
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Tabla de datos */
+  .table-header {
+    font-weight: bold;
+    background-color: #ddd;
+    padding: 5px;
+  }
+  
+  .table-data {
+    background-color: white;
+    padding: 5px;
+  }
+  
+  /* Barra de estado */
+  .status-bar {
+    height: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .green {
+    background-color: #6fcf97;
+  }
+  
+  .purple {
+    background-color: #9b51e0;
+  }
+  
+  /* Avatar del perfil */
+  ion-avatar {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+  }
+  

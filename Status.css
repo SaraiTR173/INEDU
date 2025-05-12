@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e7eb;
+    min-height: 100vh;
+    padding: 16px;
+  }
+  
+  .header {
+    width: 100%;
+    max-width: 400px;
+    background-color: #7b1c1c;
+    color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .profile-pic {
+    width: 64px;
+    height: 64px;
+    background-color: #9ca3af;
+    border-radius: 50%;
+  }
+  
+  .student-name {
+    margin-top: 8px;
+    font-weight: bold;
+  }
+  
+  .student-status {
+    color: #4ade80;
+    font-weight: bold;
+  }
+  
+  .menu {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-button {
+    width: 100%;
+    background-color: #d1d5db;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .info-section {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 16px;
+  }
+  
+  .title {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .abbreviations-title {
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  
+  .abbreviations-list {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9ca3af;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  

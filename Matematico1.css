@@ -1,0 +1,78 @@
+.titulo {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .subtitulo {
+    text-align: center;
+    font-style: italic;
+    background-color: #caa9d4;
+    padding: 4px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background: linear-gradient(to bottom, #d1d8e0, #a3cfd9);
+  }
+  
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .label {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+  }
+  
+  .azul {
+    background-color: #5d85c4;
+  }
+  
+  .rojo {
+    background-color: #d2787d;
+  }
+  
+  /* Menú personalizado */
+  .menu-toolbar {
+    background-color: #6f2cf3;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-title {
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  
+  .custom-menu-button {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+    cursor: pointer;
+  }
+  
+  .custom-menu-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #231f20;
+    border-radius: 2px;
+  }
+  
