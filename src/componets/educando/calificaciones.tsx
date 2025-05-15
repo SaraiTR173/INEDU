@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import "./css/Calificaciones.css";
+import "./css/calificaciones.css";
 import "./css/menu.css";
 
 import user from "./img/user.png";

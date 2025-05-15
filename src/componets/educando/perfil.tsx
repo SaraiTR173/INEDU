@@ -5,8 +5,9 @@ import {
   IonMenuButton,
   IonToolbar,
   IonContent,
+  IonAlert,
 } from "@ionic/react";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { cameraOutline } from 'ionicons/icons';
 import { IonIcon } from '@ionic/react';
@@ -27,24 +28,25 @@ import "./css/perfil.css";
 
 const PerfilEducador: React.FC = () => {
   const history = useHistory();
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [educador, setEducador] = useState({
     nombre: 'Marco Aurelio Gil Carrillo',
     idioma: 'Español',
     entidad: 'Morelos',
     notificaciones: true,
-    notificacionesPercepcion: true
+    notificacionesPercepcion: true,
+    fotoPerfil: ''
   });
   const [editando, setEditando] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
-  // Función genérica para navegar y cerrar el menú
+  // Navegación
   const navigateAndCloseMenu = (path: string) => {
     history.push(path);
-    // Cierra el menú
     const menu = document.querySelector('ion-menu');
     menu?.close();
   };
 
-  // Funciones específicas para cada ruta
   const Inicio = () => navigateAndCloseMenu("/educando/inicio");
   const Perfil = () => navigateAndCloseMenu("/educando/perfil");
   const Examenes = () => navigateAndCloseMenu("/educando/examenes");
@@ -52,6 +54,7 @@ const PerfilEducador: React.FC = () => {
   const Evaluacion = () => navigateAndCloseMenu("/educando/evaluacion");
   const Nosotros = () => navigateAndCloseMenu("/educando/nosotros");
   const Login = () => navigateAndCloseMenu("/login");
+  const CambiarContrasena = () => navigateAndCloseMenu("/update_pass");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -65,6 +68,24 @@ const PerfilEducador: React.FC = () => {
 
   const toggleEdit = () => {
     setEditando(!editando);
+  };
+
+  const handleFotoClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setEducador(prev => ({
+          ...prev,
+          fotoPerfil: event.target?.result as string
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
@@ -135,7 +156,6 @@ const PerfilEducador: React.FC = () => {
         </IonContent>
       </IonMenu>
 
-      {/* Contenido principal */}
       <IonPage id="main-content">
         <IonContent>
           <div style={{ borderBottom: '25px solid #18316A', width:'100%'}}></div>
@@ -158,18 +178,29 @@ const PerfilEducador: React.FC = () => {
             
             <div className="foto-perfil-section">
               <div className="foto-perfil">
-                <div className="avatar-placeholder">
-                  {educador.nombre.split(' ').map(n => n[0]).join('')}
-                </div>
-                <button className="cambiar-foto-btn">
+                {educador.fotoPerfil ? (
+                  <img src={educador.fotoPerfil} alt="Foto de perfil" className="avatar-image"/>
+                ) : (
+                  <div className="avatar-placeholder">
+                    {educador.nombre.split(' ').map(n => n[0]).join('')}
+                  </div>
+                )}
+                <button className="cambiar-foto-btn" onClick={handleFotoClick}>
                   <IonIcon icon={cameraOutline} />
                   Cambiar foto
                 </button>
+                <input 
+                  type="file" 
+                  ref={fileInputRef}
+                  onChange={handleFileChange}
+                  accept="image/*"
+                  style={{ display: 'none' }}
+                />
               </div>
             </div>
 
             <div className="form-section">
-              <div className="form-group">
+              <div className={`form-group ${editando ? 'edit-mode' : ''}`}>
                 <label>Nombre completo</label>
                 {editando ? (
                   <input
@@ -183,7 +214,7 @@ const PerfilEducador: React.FC = () => {
                 )}
               </div>
 
-              <div className="form-group">
+              <div className={`form-group ${editando ? 'edit-mode' : ''}`}>
                 <label>Idioma</label>
                 {editando ? (
                   <select
@@ -200,7 +231,7 @@ const PerfilEducador: React.FC = () => {
                 )}
               </div>
 
-              <div className="form-group">
+              <div className={`form-group ${editando ? 'edit-mode' : ''}`}>
                 <label>Entidad federativa</label>
                 {editando ? (
                   <input
@@ -242,7 +273,12 @@ const PerfilEducador: React.FC = () => {
             </div>
 
             <div className="actions-section">
-              <button className="change-password-btn">Cambiar contraseña</button>
+              <button 
+                className="change-password-btn"
+                onClick={CambiarContrasena}
+              >
+                Cambiar contraseña
+              </button>
               <button 
                 className={`edit-btn ${editando ? 'save' : ''}`}
                 onClick={toggleEdit}
@@ -253,6 +289,14 @@ const PerfilEducador: React.FC = () => {
           </div>
         </IonContent>
       </IonPage>
+
+      <IonAlert
+        isOpen={showAlert}
+        onDidDismiss={() => setShowAlert(false)}
+        header={'Cambios guardados'}
+        message={'Tu perfil ha sido actualizado correctamente.'}
+        buttons={['OK']}
+      />
     </>
   );
 };
