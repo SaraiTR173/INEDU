@@ -2,7 +2,6 @@ import {
   IonPage,
   IonContent,
   IonToolbar,
-  IonTitle,
   IonMenuButton,
   IonMenu,
   IonButton,
@@ -16,6 +15,11 @@ import "./css/menu.css";
 import user from "./img/user.png";
 import menuIcon from "./img/menu.png";
 import icon_inicio from "./img/img-inicio.png";
+import icon_perfil from "./img/img-perfil.png";
+import icon_exam from "./img/img-exam.png";
+import icon_califi from "./img/img-califi.png";
+import icon_eval from "./img/img-eval.png";
+import icon_nosotros from "./img/img-nosotros.png";
 import icon_exit from "./img/img-exit.png";
 
 const Calificaciones: React.FC = () => {
@@ -70,8 +74,6 @@ const Calificaciones: React.FC = () => {
     },
   ];
 
-  const imagenPerfil = "https://placehold.co/100x100";
-
   const navigateAndCloseMenu = (path: string) => {
     history.push(path);
     const menu = document.querySelector("ion-menu");
@@ -79,6 +81,11 @@ const Calificaciones: React.FC = () => {
   };
 
   const Inicio = () => navigateAndCloseMenu("/educando/inicio");
+  const Perfil = () => navigateAndCloseMenu("/educando/perfil");
+  const Examenes = () => navigateAndCloseMenu("/educando/examenes");
+  const Calificacion = () => navigateAndCloseMenu("/educando/calificaciones");
+  const Evaluacion = () => navigateAndCloseMenu("/educando/evaluacion");
+  const Nosotros = () => navigateAndCloseMenu("/educando/nosotros");
   const Login = () => navigateAndCloseMenu("/login");
 
   return (
@@ -106,6 +113,41 @@ const Calificaciones: React.FC = () => {
               </div>
             </IonButton>
 
+            <IonButton className="button-perfil" onClick={Perfil}>
+              <div className="button-content">
+                <img src={icon_perfil} className="button-icon" />
+                <span className="button-text">Perfil</span>
+              </div>
+            </IonButton>
+
+            <IonButton className="button-examenes" onClick={Examenes}>
+              <div className="button-content">
+                <img src={icon_exam} className="button-icon" />
+                <span className="button-text">Exámenes</span>
+              </div>
+            </IonButton>
+
+            <IonButton className="button-calificacion" onClick={Calificacion}>
+              <div className="button-content">
+                <img src={icon_califi} className="button-icon" />
+                <span className="button-text">Calificaciones</span>
+              </div>
+            </IonButton>
+
+            <IonButton className="button-evaluacion" onClick={Evaluacion}>
+              <div className="button-content">
+                <img src={icon_eval} className="button-icon" />
+                <span className="button-text">Evaluación</span>
+              </div>
+            </IonButton>
+
+            <IonButton className="button-nosotros" onClick={Nosotros}>
+              <div className="button-content">
+                <img src={icon_nosotros} className="button-icon" />
+                <span className="button-text">Acerca de nosotros</span>
+              </div>
+            </IonButton>
+
             <IonButton className="button-salir" onClick={Login}>
               <div className="button-content">
                 <img src={icon_exit} className="button-icon" />
@@ -117,55 +159,59 @@ const Calificaciones: React.FC = () => {
       </IonMenu>
 
       <IonPage id="main-content">
-        <IonToolbar color="danger">
-          <IonMenuButton>
-            <img src={menuIcon} style={{ width: "24px" }} />
-          </IonMenuButton>
-          <IonTitle>Calificaciones</IonTitle>
-        </IonToolbar>
-
-        <IonContent className="container">
-          <div className="header">
-            <img src={imagenPerfil} alt="Perfil" className="icono-perfil" />
-            <h1>Calificaciones</h1>
-          </div>
-
-          <div className="contenido">
-            {calificaciones.map((item) => (
-              <div
-                key={item.id}
-                className="tarjeta"
-                onClick={() =>
-                  setMateriaSeleccionada(materiaSeleccionada === item.id ? null : item.id)
-                }
-              >
-                <h2>{item.materia}</h2>
-                <div className="separador"></div>
-                <div className="info">
-                  <span>CLAVE</span>
-                  <span>FECHA</span>
-                </div>
-                <div className="valores">
-                  <span>{item.clave}</span>
-                  <span>{item.fecha}</span>
-                </div>
-                <div className={`barra ${item.color}`}></div>
-
-                {materiaSeleccionada === item.id && (
-                  <div className="detalle-expandido">
-                    <div className="detalle-fila encabezado-fila">
-                      <span>TIPO DE EVALUACIÓN</span>
-                      <span>CALIFICACIÓN</span>
-                    </div>
-                    <div className="detalle-fila">
-                      <span>{item.evaluacion}</span>
-                      <span>{item.calificacion}</span>
-                    </div>
-                  </div>
-                )}
+        <IonContent>
+          <div style={{ borderBottom: '25px solid #7b1c1c', width: '100%' }}></div>
+          <IonToolbar>
+            <div className="toolbar-perfil">
+              <div className="menu-perfil">
+                <IonMenuButton>
+                  <img src={menuIcon} alt="Menú" style={{ width: "24px" }} />
+                </IonMenuButton>
+                <img src={user} className="user-perfil" />
               </div>
-            ))}
-          </div>
+              <div className="toolbar-title">
+                <span className="text-perfil">Calificaciones</span>
+              </div>
+            </div>
+          </IonToolbar>
+
+
+            <div className="contenido">
+              {calificaciones.map((item) => (
+                <div
+                  key={item.id}
+                  className="tarjeta"
+                  onClick={() =>
+                    setMateriaSeleccionada(materiaSeleccionada === item.id ? null : item.id)
+                  }
+                >
+                  <h2>{item.materia}</h2>
+                  <div className="separador"></div>
+                  <div className="info">
+                    <span>CLAVE</span>
+                    <span>FECHA</span>
+                  </div>
+                  <div className="valores">
+                    <span>{item.clave}</span>
+                    <span>{item.fecha}</span>
+                  </div>
+                  <div className={`barra ${item.color}`}></div>
+
+                  {materiaSeleccionada === item.id && (
+                    <div className="detalle-expandido">
+                      <div className="detalle-fila encabezado-fila">
+                        <span>TIPO DE EVALUACIÓN</span>
+                        <span>CALIFICACIÓN</span>
+                      </div>
+                      <div className="detalle-fila">
+                        <span>{item.evaluacion}</span>
+                        <span>{item.calificacion}</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
         </IonContent>
       </IonPage>
     </>

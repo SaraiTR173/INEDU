@@ -71,6 +71,7 @@ body, html {
 .tarjeta h2 {
   margin: 0;
   font-size: 18px;
+  color: #18316A;
 }
 
 .separador {
@@ -138,4 +139,35 @@ body, html {
 
 .azul {
   background-color: #2196f3;
+}
+
+/* Estilos específicos para el menú superior */
+.toolbar-perfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-perfil {
+  display: flex;
+  align-items: center;
+}
+
+.user-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.toolbar-title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.text-perfil {
+  font-size: 20px;
+  font-weight: bold;
+  color: #18316A;
 }
