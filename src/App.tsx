@@ -20,11 +20,11 @@ import alertUpdate from "./componets/login/alertUpdate";
 
 //Educando
 import InicioEducando from "./componets/educando/inicio";
-//import PerfilEducando from "./componets/educando/perfil";
+import PerfilEducando from "./componets/educando/perfil";
 import ExamenesEducando from "./componets/educando/examenes";
-import CalificacionesEducando from "./componets/educando/Calificaciones"
+import CalificacionesEducando from "./componets/educando/calificaciones"
 import EvaluacionDocente from "./componets/educando/EvalDoc";
-//import NosotrosEducando from "./componets/educando/nosotros";
+import NosotrosEducando from "./componets/educando/nosotros";
 
 //Materias Educando
 import Lengua1 from "./componets/educando/Materias/Lengua1";
@@ -75,11 +75,11 @@ const App: React.FC = () => {
                         <Route exact path="/alert_update" component={alertUpdate} />
                         
                         <Route exact path="/educando/inicio" component={InicioEducando} />
-                        {/* <Route exact path="/educando/perfil" component={PerfilEducando} />*/}
+                        <Route exact path="/educando/perfil" component={PerfilEducando} />
                         <Route exact path="/educando/examenes" component={ExamenesEducando} />
                         <Route exact path="/educando/calificaciones" component={CalificacionesEducando} />
                         <Route exact path="/educando/evaluacion" component={EvaluacionDocente} />
-                        {/* <Route exact path="/educando/nosotros" component={NosotrosEducando} /> */}
+                        <Route exact path="/educando/nosotros" component={NosotrosEducando} />
 
                         <Route exact path="/educando/materias/Lengua-y-Comunicacion-1" component={Lengua1} />
                         <Route exact path="/educando/materias/Lengua-y-Comunicacion-2" component={Lengua2} />

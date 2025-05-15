@@ -1,0 +1,145 @@
+.toolbar-perfil {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.menu-perfil {
+  display: flex;
+  align-items: center;
+}
+
+.user-perfil {
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+}
+
+.toolbar-title {
+  margin-left: 20px;
+}
+
+.text-perfil {
+  font-size: 18px;
+  font-weight: bold;
+  color: #18316A;
+}
+
+.perfil-educador-container {
+  padding: 20px;
+}
+
+.perfil-educador-container h1 {
+  color: #18316A;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.foto-perfil-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.foto-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #18316A;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cambiar-foto-btn {
+  background: none;
+  border: none;
+  color: #18316A;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cambiar-foto-btn ion-icon {
+  margin-right: 5px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #18316A;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group p {
+  padding: 8px;
+  margin: 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+.actions-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.change-password-btn {
+  background: none;
+  border: 1px solid #18316A;
+  color: #18316A;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #18316A;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn.save {
+  background-color: #4CAF50;
+}
