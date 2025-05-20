@@ -1,0 +1,32 @@
+ion-content {
+  --background: url('/assets/fondo3.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  --color: #fff;
+}
+
+.material-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Oscurecer fondo */
+  z-index: 0;
+}
+
+.material-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarjetas personalizadas */
+.pdf-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.link-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
